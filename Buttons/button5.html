@@ -1,0 +1,33 @@
+<button>Beach Time 🌴</button>
+<style>
+	button {
+		color: #fff;
+		border: none;
+		border-radius: 5rem;
+		cursor: pointer;
+		font: 1.5em Raleway, sans-serif;
+		height: 5rem;
+		width: 20rem; 
+		background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+		background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+		background-size: 500%; /*Phải đứng sau background*/
+	}
+
+	button:hover {
+		-webkit-animation: gradient 3s ease;
+        -moz-animation: gradient 3s ease;
+        animation: gradient 3s ease;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		animation-fill-mode: forwards; /*Sau animate giữ background ở center k trả về background ban đầu*/
+    }
+
+	@keyframes gradient {
+	0% {
+		background-position: 0% 50%; }
+	100% {
+		background-position: 100%; }
+    }
+
+</style>

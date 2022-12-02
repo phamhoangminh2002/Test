@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Selector</h1>
+    <hr>
+    <div class="content">
+       <div class="content-item">
+            <h3>1. Simple selectors (select elements based on name, id, class)</h3>
+            <div class="code">
+                <pre>
+                    p {
+                        text-align: center;
+                        color: red;
+                    }
+                </pre>
+            </div>
+       </div>
+        <!--  -->
+       <div class="content-item">
+            <h3>2. Combinator selectors (select elements based on a specific relationship between them)</h3>
+            <li>Descendant Selector</li>
+            <div class="code">
+                <pre>
+                    div p {
+                        background-color: yellow;
+                    }
+                </pre>
+            </div>
+            <li>Child Selector (>)</li>
+            <div class="code">
+                <pre>
+                    div > p {
+                        background-color: yellow;
+                    }
+                </pre>
+            </div>
+            <li>Adjacent Sibling Selector (+)</li>
+            <div class="code">
+                <pre>
+                    div + p {
+                        background-color: yellow;
+                    }
+                </pre>
+            </div>
+            <li>General Sibling Selector (~)</li>
+            <div class="code">
+                <pre>
+                    div ~ p {
+                        background-color: yellow;
+                    }
+                </pre>
+            </div>
+       </div>
+         <!--  -->
+       <div class="content-item">
+            <h3>3. Pseudo-class selectors (select elements based on a certain state)</h3>
+            <li>Anchor Pseudo-classes</li>
+            <div class="code">
+                <pre>
+                <span>  /* unvisited link */</span>
+                    a:link {
+                    color: #FF0000;
+                    }
+
+                    <span>/* visited link */</span>
+                    a:visited {
+                    color: #00FF00;
+                    }
+
+                <span> /* mouse over link */</span>
+                    a:hover {
+                    color: #FF00FF;
+                    }
+
+                    <span>/* selected link */</span>
+                    a:active {
+                    color: #0000FF;
+                    }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_pseudo-class_links" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <div class="warn">
+                Note: <code>a:hover</code> MUST come after <code>a:link</code> and <code>a:visited</code> in the CSS definition in order to be effective! <code>a:active</code> MUST come after <code>a:hover</code> in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.
+            </div>
+            <li>CSS - The <code>:first-child</code> Pseudo-class</li>
+            <div class="code">
+                <pre>
+                    p i:first-child {
+                        color: blue;
+                        }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_first-child2" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <div class="code">
+                <pre>
+                    p:first-child i {
+                        color: blue;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_first-child3" target="_blank">Example</a></span>
+                </pre>
+            </div>
+       </div>
+       <!--  -->
+       <div class="content-item">
+        <h3>4. Pseudo-elements selectors (select and style a part of an element)</h3>
+
+        <li>The <code>::first-line</code> Pseudo-element</li>
+        <div class="code">
+            <pre>
+                p::first-line {
+                    color: #ff0000;
+                    font-variant: small-caps;
+                  }
+            </pre>
+        </div>
+        <p>The <code>::first-line</code> pseudo-element is used to add a special style to the first line of a text.</p>
+        <p><strong>Note:</strong> The <code>::first-line</code> pseudo-element can only be applied to block-level elements.</p>
+        <p>The following properties apply to the <code>::first-line</code> pseudo-element:</p>
+        <pre>
+            font properties
+            color properties
+            background properties
+            word-spacing
+            letter-spacing
+            text-decoration
+            vertical-align
+            text-transform
+            line-height
+            clear
+        </pre>
+
+        <li>The <code>::first-letter</code> Pseudo-element</li>
+        <div class="code">
+            <pre>
+                p::first-letter {
+                    color: #ff0000;
+                    font-size: xx-large;
+                  }
+            </pre>
+        </div>
+        <p>The <code>::first-letter</code> pseudo-element is used to add a special style to the first letter of a text.</p>
+        <p><strong>Note:</strong> The <code>::first-letter</code> pseudo-element can only be applied to block-level elements.</p>
+
+           <p>The following properties apply to the <code>::first-letter</code> pseudo- element: </p>
+           <pre>
+            font properties
+            color properties 
+            background properties
+            margin properties
+            padding properties
+            border properties
+            text-decoration
+            vertical-align (only if "float" is "none")
+            text-transform
+            line-height
+            float
+            clear
+           </pre>
+
+           <li>CSS - The <code>::before</code> Pseudo-element</li>
+           <div class="code">
+             <pre>
+                h1::before {
+                    content: url(smiley.gif);
+                  }
+                
+                <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_before" target="_blank">Example</a></span>
+             </pre>
+            </div>
+            <p>The <code>::before</code> pseudo-element can be used to insert some content before the content of an element.</p>
+             <br>
+
+            <li>CSS - The <code>::after</code> Pseudo-element</li>
+            <div class="code">
+                <pre>
+                    h1::after {
+                        content: url(smiley.gif);
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_after" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The <code>::after</code> pseudo-element can be used to insert some content after the content of an element.</p>
+             <br>
+
+            <li>CSS - The <code>::marker</code> Pseudo-element</li>
+            <div class="code">
+                <pre>
+                    ::marker {
+                        color: red;
+                        font-size: 23px;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_marker" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The <code>::marker</code> pseudo-element selects the markers of list items.</p>
+            <br>
+
+            <li>CSS - The <code>::selection</code> Pseudo-element</li>
+            <div class="code">
+                <pre>
+                    ::selection {
+                        color: red;
+                        background: yellow;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_selection" target="_blank">Example</a></span>
+                </pre>
+            </div>
+
+            <h2>All CSS Pseudo Elements</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Example description</th>
+                    <th>Exercise</th>
+                </tr>
+                <tr>
+                    <td>::after</td>
+                    <td>p::after</td>
+                    <td>Insert something after the content of each <code>p</code> element</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>::before</td>
+                    <td>p::before</td>
+                    <td>Insert something before the content of each <code>p</code> element</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>::first-letter</td>
+                    <td>p::first-letter</td>
+                    <td>Selects the first letter of each <code>p</code> element </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>::first-line</td>
+                    <td>p::first-line</td>
+                    <td>Selects the first line of each <code>p</code> element</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>::marker</td>
+                    <td>::marker</td>
+                    <td>Selects the markers of list items</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>::selection</td>
+                    <td>p::selection</td>
+                    <td>Selects the portion of an element that is selected by a user</td>
+                    <td></td>
+                </tr>
+            </table>
+            <h2>All CSS Pseudo Classes</h2>
+            <table>
+                <tr>
+                    <th>Selector</th>
+                    <th>Example</th>
+                    <th>Example description</th>
+                    <th>Exercise</th>
+                </tr>
+                <tr>
+                    <td>:active</td>
+                    <td>a:active</td>
+                    <td>Selects the active link</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:checked</td>
+                    <td>input:checked</td>
+                    <td>Selects every checked <code>input</code> element</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:disabled</td>
+                    <td>input:disabled</td>
+                    <td>Selects every disabled <code>input</code> element</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:empty</td>
+                    <td>p:empty</td>
+                    <td>Selects every <code>p</code> element that has no children</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:enabled</td>
+                    <td>input:enabled</td>
+                    <td>Selects every enabled <code>input</code> element</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_enabled_disabled" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:first-child</td>
+                    <td>p:first-child</td>
+                    <td>Selects every <code>p</code> elements that is the first child of its parent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:first-of-type</td>
+                    <td>p:first-of-type</td>
+                    <td>Selects every <code>p</code> element that is the first <code>p</code> element of its parent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:focus</td>
+                    <td>input:focus</td>
+                    <td>Selects the <code>input</code> element that has focus</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:hover</td>
+                    <td>a:hover</td>
+                    <td>Selects links on mouse over</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:in-range</td>
+                    <td>input:in-range</td>
+                    <td>Selects <code>input</code> elements with a value within a specified range</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_in-range" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:invalid</td>
+                    <td>input:invalid</td>
+                    <td>Selects all <code>input</code> elements with an invalid value</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:lang(language)</td>
+                    <td>p:lang(it)</td>
+                    <td>Selects every <code>p</code> element with a lang attribute value starting with "it"</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_lang" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:last-child</td>
+                    <td>p:last-child</td>
+                    <td>Selects every <code>p</code> elements that is the last child of its parent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:last-of-type</td>
+                    <td>p:last-of-type</td>
+                    <td>Selects every <code>p</code> element that is the last <code>p</code> element of its parent</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_last-of-type" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:link</td>
+                    <td>a:link</td>
+                    <td>Selects all unvisited links</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:not(selector)</td>
+                    <td>:not(p)</td>
+                    <td>Selects every element that is not a <code>p</code> element</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_not" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:nth-child(n)</td>
+                    <td>p:nth-child(2)</td>
+                    <td>Selects every <p> element that is the second child of its parent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:nth-last-child(n)</td>
+                    <td>p:nth-last-child(2)</td>
+                    <td>Selects every <code>p</code> element that is the second child of its parent, counting from the last child</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:nth-last-of-type(n)</td>
+                    <td>p:nth-last-of-type(2)</td>
+                    <td>Selects every <code>p</code> element that is the second <code>p</code> element of its parent, counting from the last child</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:nth-of-type(n)</td>
+                    <td>p:nth-of-type(2)</td>
+                    <td>Selects every <code>p</code> element that is the second <code>p</code> element of its parent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:only-of-type</td>
+                    <td>p:only-of-type</td>
+                    <td>Selects every <code>p</code> element that is the only <code>p</code> element of its parent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:only-child</td>
+                    <td>p:only-child</td>
+                    <td>Selects every <code>p</code> element that is the only child of its parent</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_only-child" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:optional</td>
+                    <td>input:optional</td>
+                    <td>Selects <code>input</code> elements with no "required" attribute</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_optional" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:out-of-range</td>
+                    <td>input:out-of-range</td>
+                    <td>Selects <code>input</code> elements with a value outside a specified range</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_out-of-range" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:read-only</td>
+                    <td>input:read-only</td>
+                    <td>Selects <code>input</code> elements with a "readonly" attribute specified</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_read-only" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:read-write</td>
+                    <td>input:read-write</td>
+                    <td>Selects <code>input</code> elements with no "readonly" attribute</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_read-write" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:required</td>
+                    <td>input:required</td>
+                    <td>Selects <code>input</code> elements with a "required" attribute specified</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:root</td>
+                    <td>root</td>
+                    <td>Selects the document's root element</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:target</td>
+                    <td>#news:target</td>
+                    <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_target" target="_blank">Example</a></td>
+                </tr>
+                <tr>
+                    <td>:valid</td>
+                    <td>input:valid</td>
+                    <td>Selects all <code>input</code> elements with a valid value</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>:visited</td>
+                    <td>a:visited</td>
+                    <td>Selects all visited links</td>
+                    <td><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_link_more1" target="_blank">Example</a></td>
+                </tr>
+            </table>
+       </div>
+       <!--  -->
+       <div class="content-item">
+            <h3>5. Attribute selectors (select elements based on an attribute or attribute value)</h3>
+
+            <li>CSS [attribute] Selector</li>
+            <div class="code">
+                <pre>
+                    a[target] {
+                        background-color: yellow;
+                    }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The [attribute] selector is used to select elements with a specified attribute.</p>
+            <br>
+            <li>CSS [attribute="value"] Selector</li>
+            <div class="code">
+                <pre>
+                    a[target="_blank"] {
+                        background-color: yellow;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_value" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <br>
+            <li>CSS [attribute~="value"] Selector</li>
+            <div class="code">
+                <pre>
+                    [title~="flower"] {
+                        border: 5px solid yellow;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_value2" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.</p>
+             <br>
+            <li>CSS [attribute|="value"] Selector</li>
+            <div class="code">
+                <pre>
+                    [class|="top"] {
+                        background: yellow;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_hyphen" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The [attribute|="value"] selector is used to select elements with the specified attribute, whose value can be exactly the specified value, or the specified value followed by a hyphen (-).</p>
+            <br>
+            <p><strong>Note:</strong> The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text".</p>
+            <br>
+            <li>CSS [attribute^="value"] Selector</li>
+            <div class="code">
+                <pre>
+                    [class^="top"] {
+                        background: yellow;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_start" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The [attribute^="value"] selector is used to select elements with the specified attribute, whose value starts with the specified value.</p>
+            <p><strong>Note:</strong> The value does not have to be a whole word!</p>
+            <br>
+            <li>CSS [attribute$="value"] Selector</li>
+            <div class="code">
+                <pre>
+                    [class$="test"] {
+                        background: yellow;
+                      }
+                    
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_end" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.</p>
+            <p><strong>Note: </strong> The value does not have to be a whole word!  </p>
+            <br>
+            <li>CSS [attribute*="value"] Selector</li>
+            <div class="code">
+                <pre>
+                    [class*="te"] {
+                        background: yellow;
+                      }
+
+                    <span><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_attribute_contain" target="_blank">Example</a></span>
+                </pre>
+            </div>
+            <p>The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.</p>
+            <p><strong>Note:</strong> The value does not have to be a whole word!  </p>
+       </div>
+
+    </div>
+</body>
+</html>

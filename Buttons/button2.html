@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+</head>
+<style>
+    .btn-container{
+        height: 100px;
+        width: 500px;
+    }
+    .btn{
+        border:transparent;
+        position: relative; 
+        padding: 5px 10px;
+        cursor: pointer;
+        z-index: -2;
+        overflow: hidden;
+        box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+        margin: 100px;
+    }
+    .btn-fill{
+        height: 70px;
+	    width: 420px;
+        z-index: -1;
+        position: absolute;
+	    background-image: linear-gradient(to right, #E040FB, #00BCD4);
+	    margin: -40px 0 0 -180px;
+	    transition: all 0.4s ease;
+	    background-size: 150% 150%;
+	    transition: all 0.4s ease;
+    }
+    .btn:hover .btn-fill {
+        -webkit-animation: gradient 3s ease infinite;
+        -moz-animation: gradient 3s ease infinite;
+        animation: gradient 3s ease infinite;
+    }
+     @-webkit-keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @-moz-keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
+<body>
+    <div class="btn-container">
+        <button class="btn">
+             Hover over me
+            <div class="btn-fill"></div>
+        </button>
+    </div>
+
+</body>
+</html>

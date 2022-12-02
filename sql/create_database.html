@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create database</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="content-item">
+            <h1>Create database</h1>
+
+            <li>Create database not parameter</li>
+            <div class="code">
+                <pre>
+                    <pre>
+                        CREATE DATABASE NewDataBase
+                        go
+                    </pre>
+                </pre>
+            </div>
+            
+            <li>Create database 2 parameter: primary and log</li>
+            <div class="code">
+                <pre>
+                    CREATE DATABASE NewDataBase2
+                    ON PRIMARY
+                    (NAME = 'NewDataBase2', FILENAME = 'C:\DATA\NewDataBase2.mdf', 
+                    SIZE = 10MB, MAXSIZE = 200MB, FILEGROWTH = 2MB)
+                    LOG ON
+                    (NAME = 'NewDataBase2_log', FILENAME = 'C:\DATA\NewDataBase2.ldf', 
+                    SIZE = 10MB, MAXSIZE = unlimited, FILEGROWTH = 2MB)
+                    GO
+                </pre>
+            </div>
+
+            <li>Create database 2 parameter: primary, filegroup and log</li>
+            <div class="code">
+                <pre>
+                    CREATE DATABASE NewDataBase3
+                    ON PRIMARY
+                    (NAME = 'NewDataBase3', FILENAME = 'C:\DATA\NewDataBase3.mdf',
+                     SIZE = 10MB, MAXSIZE = 200MB, FILEGROWTH = 2MB),
+                    FILEGROUP myFileGroup
+                    (NAME = 'NewDataBase3_FG', FILENAME = 'C:\DATA\NewDataBase3_FG.ndf', SIZE = 10MB, 
+                    MAXSIZE = 200MB, FILEGROWTH = 2MB)
+                    LOG ON
+                    (NAME = 'NewDataBase3_log', FILENAME = 'C:\DATA\NewDataBase3.ldf', 
+                    SIZE = 10MB, MAXSIZE = unlimited, FILEGROWTH = 2MB)
+                    GO
+                </pre>
+            </div>
+            
+            <li>Change database</li>
+            <div class="code">
+                <pre>
+                    ALTER DATABASE NewDataBase
+                    MODIFY NAME = NewDataBase1
+                    GO
+                </pre>
+            </div>
+
+            <li>Change owner</li>
+            <div class="code">
+                <pre>
+                    EXEC sp_changedbowner 'sa'<span> --'sa' is permission adminTrator</span>
+                    GO
+                </pre>
+            </div>
+
+            <li>Drop database</li>
+            <div class="code">
+                <pre>
+                    DROP DATABASE NewDataBase1
+                    GO
+                </pre>
+            </div>
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>

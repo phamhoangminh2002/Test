@@ -1,0 +1,422 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<div id="light">
+	<ul class="btn-list normal">
+		<li><a href="" class="btn-gradient facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+		<li><a href="" class="btn-gradient twitter"><i class="fa-brands fa-twitter"></i></a></li>
+		<li><a href="" class="btn-gradient google-plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+		<li><a href="" class="btn-gradient instagram"><i class="fa-brands fa-instagram"></i></a></li>
+		<li><a href="" class="btn-gradient linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+		<li><a href="" class="btn-gradient github"><i class="fa-brands fa-github"></i></a></li>
+		<li><a href="" class="btn-gradient codepen"><i class="fa-brands fa-codepen"></i></a></li>
+		<li><a href="" class="btn-gradient gmail"><i class="fa fa-envelope"></i></a></li>
+		<li><a href="" class="btn-gradient skype"><i class="fa-brands fa-skype"></i></a></li>
+	</ul>
+
+	<ul class="btn-list rounded">
+		<li><a href="" class="btn-gradient rounded facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+		<li><a href="" class="btn-gradient rounded twitter"><i class="fa-brands fa-twitter"></i></a></li>
+		<li><a href="" class="btn-gradient rounded google-plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+		<li><a href="" class="btn-gradient rounded instagram"><i class="fa-brands fa-instagram"></i></a></li>
+		<li><a href="" class="btn-gradient rounded linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+		<li><a href="" class="btn-gradient rounded github"><i class="fa-brands fa-github"></i></a></li>
+		<li><a href="" class="btn-gradient rounded codepen"><i class="fa-brands fa-codepen"></i></a></li>
+		<li><a href="" class="btn-gradient rounded gmail"><i class="fa fa-envelope"></i></a></li>
+		<li><a href="" class="btn-gradient rounded skype"><i class="fa-brands fa-skype"></i></a></li>
+	</ul>
+</div>
+<div id="dark">
+	<ul class="btn-list normal">
+		<li><a href="" class="btn-gradient facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+		<li><a href="" class="btn-gradient twitter"><i class="fa-brands fa-twitter"></i></a></li>
+		<li><a href="" class="btn-gradient google-plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+		<li><a href="" class="btn-gradient instagram"><i class="fa-brands fa-instagram"></i></a></li>
+		<li><a href="" class="btn-gradient linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+		<li><a href="" class="btn-gradient github"><i class="fa-brands fa-github"></i></a></li>
+		<li><a href="" class="btn-gradient codepen"><i class="fa-brands fa-codepen"></i></a></li>
+		<li><a href="" class="btn-gradient gmail"><i class="fa fa-envelope"></i></a></li>
+		<li><a href="" class="btn-gradient skype"><i class="fa-brands fa-skype"></i></a></li>
+	</ul>
+
+	<ul class="btn-list rounded">
+		<li><a href="" class="btn-gradient rounded facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+		<li><a href="" class="btn-gradient rounded twitter"><i class="fa-brands fa-twitter"></i></a></li>
+		<li><a href="" class="btn-gradient rounded google-plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+		<li><a href="" class="btn-gradient rounded instagram"><i class="fa-brands fa-instagram"></i></a></li>
+		<li><a href="" class="btn-gradient rounded linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+		<li><a href="" class="btn-gradient rounded github"><i class="fa-brands fa-github"></i></a></li>
+		<li><a href="" class="btn-gradient rounded codepen"><i class="fa-brands fa-codepen"></i></a></li>
+		<li><a href="" class="btn-gradient rounded gmail"><i class="fa fa-envelope"></i></a></li>
+		<li><a href="" class="btn-gradient rounded skype"><i class="fa-brands fa-skype"></i></a></li>
+	</ul>
+</div>
+<style>
+	*{
+		list-style: none;
+	}
+	body {
+		width:100%;
+		height:100%;
+		position:fixed;
+		top:0;
+		left:0;
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:flex;
+		-webkit-box-align:center;
+		-ms-flex-align:center;
+		align-items:center;
+		-webkit-box-pack:center;
+		-ms-flex-pack:center;
+		justify-content:center;
+		background:#607D8B
+   }
+
+.btn-list
+{
+	margin:48px 0;
+	padding:10px 16px;
+	position:relative;
+}
+.btn-list li{
+	float:left
+}
+
+.btn-gradient
+{
+	display:list-item;
+	text-align: center;
+	width:36px;
+	height:36px;
+	line-height:2.2;
+	margin:10px;
+	border-radius:2px;
+	-webkit-transition:all 300ms;
+	transition:all 300ms
+}
+
+.btn-gradient.rounded
+{
+	border-radius:50%
+}
+
+#light,#dark
+{
+	margin:20px;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	align-items:center;
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-ms-flex-direction:column;
+	flex-direction:column;
+}
+
+#light .btn-list
+{
+	background:#FFF;
+	box-shadow:0 0 8px rgba(0,0,0,0.10)
+}
+
+#light .btn-list:after
+{
+	color:rgba(0,0,0,0.54);
+	background:#FAFAFA;
+	box-shadow:0 0 8px rgba(0,0,0,0.10)
+}
+
+#light .btn-gradient
+{
+	color:rgba(0,0,0,0.54);
+	box-shadow:0 0 1px rgba(0,0,0,0.54)
+}
+
+#light .btn-gradient:hover
+{
+	color:#FFF
+}
+
+#dark .btn-gradient
+{
+	color:rgba(255,255,255,0.54);
+	box-shadow:0 0 1px rgba(255,255,255,0.54)
+}
+
+#dark .btn-gradient:hover
+{
+	color:#FFF
+}
+
+#dark .btn-list:after
+{
+	color:rgba(255,255,255,0.54);
+	background:#000;
+	box-shadow:0 0 8px rgba(255,255,255,0.10)
+}
+
+#dark .btn-list
+{
+	background:#212121;
+	box-shadow:0 0 8px rgba(0,0,0,0.10);
+}
+
+@-webkit-keyframes Gradient {
+	0%
+	{
+		background-position:0 50%
+	}
+	
+	50%
+	{
+		background-position:100% 50%
+	}
+	
+	100%
+	{
+		background-position:0 50%
+	}
+}
+
+@keyframes Gradient {
+	0%
+	{
+		background-position:0 50%
+	}
+	
+	50%
+	{
+		background-position:100% 50%
+	}
+	
+	100%
+	{
+		background-position:0 50%
+	}
+}
+
+#light .btn-gradient.facebook:hover
+{
+	box-shadow:0 5px 8px rgba(26,35,126,0.25);
+	background:#3949AB;
+	background:-webkit-linear-gradient(left,#3949AB 0%,#2196F3 100%);
+	background:linear-gradient(to right,#3949AB 0%,#2196F3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3949AB',endColorstr='#2196F3',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.twitter:hover
+{
+	box-shadow:0 5px 8px rgba(33,150,243,0.25);
+	background:#00BCD4;
+	background:-webkit-linear-gradient(left,#00BCD4 0%,#2196F3 100%);
+	background:linear-gradient(to right,#00BCD4 0%,#2196F3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BCD4',endColorstr='#2196F3',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.google-plus:hover
+{
+	box-shadow:0 5px 8px rgba(244,67,54,0.25);
+	background:#F44336;
+	background:-webkit-linear-gradient(left,#F44336 0%,#FF1744 100%);
+	background:linear-gradient(to right,#F44336 0%,#FF1744 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F44336',endColorstr='#FF1744',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.instagram:hover
+{
+	box-shadow:0 5px 8px rgba(63,81,181,0.25);
+	background:#FFC107;
+	background:-webkit-linear-gradient(left,#FFC107 0%,#F50057 50%,#3F51B5 100%);
+	background:linear-gradient(to right,#FFC107 0%,#F50057 50%,#3F51B5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC107',endColorstr='#3F51B5',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 5s ease infinite;
+	animation:Gradient 5s ease infinite
+}
+
+#light .btn-gradient.linkedin:hover
+{
+	box-shadow:0 5px 8px rgba(3,169,244,0.25);
+	background:#0288D1;
+	background:-webkit-linear-gradient(left,#0288D1 0%,#2196F3 100%);
+	background:linear-gradient(to right,#0288D1 0%,#2196F3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288D1',endColorstr='#2196F3',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.github:hover
+{
+	color:rgba(33,33,33,1);
+	box-shadow:0 5px 8px rgba(0,0,0,0.25);
+	background:#ECEFF1;
+	background:-webkit-linear-gradient(left,#ECEFF1 0%,#B0BEC5 100%);
+	background:linear-gradient(to right,#ECEFF1 0%,#B0BEC5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ECEFF1',endColorstr='#B0BEC5',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.codepen:hover
+{
+	box-shadow:0 5px 8px rgba(0,0,0,0.25);
+	background:#000;
+	background:-webkit-linear-gradient(left,#000 0%,#212121 100%);
+	background:linear-gradient(to right,#000 0%,#212121 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#212121',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.gmail:hover
+{
+	box-shadow:0 5px 8px rgba(244,67,54,0.25);
+	background:#D50000;
+	background:-webkit-linear-gradient(left,#D50000 0%,#FF1744 100%);
+	background:linear-gradient(to right,#D50000 0%,#FF1744 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#D50000',endColorstr='#FF1744',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#light .btn-gradient.skype:hover
+{
+	box-shadow:0 5px 8px rgba(3,169,244,0.25);
+	background:#030000;
+	background:#039BE5;
+	background:-webkit-linear-gradient(left,#039BE5 0%,#29B6F6 100%);
+	background:linear-gradient(to right,#039BE5 0%,#29B6F6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#039BE5',endColorstr='#29B6F6',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.facebook:hover
+{
+	box-shadow:0 5px 8px rgba(26,35,126,0.50);
+	background:#3949AB;
+	background:-webkit-linear-gradient(left,#3949AB 0%,#2196F3 100%);
+	background:linear-gradient(to right,#3949AB 0%,#2196F3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3949AB',endColorstr='#2196F3',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.twitter:hover
+{
+	box-shadow:0 5px 8px rgba(33,150,243,0.50);
+	background:#00BCD4;
+	background:-webkit-linear-gradient(left,#00BCD4 0%,#2196F3 100%);
+	background:linear-gradient(to right,#00BCD4 0%,#2196F3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BCD4',endColorstr='#2196F3',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.google-plus:hover
+{
+	box-shadow:0 5px 8px rgba(244,67,54,0.50);
+	background:#F44336;
+	background:-webkit-linear-gradient(left,#F44336 0%,#FF1744 100%);
+	background:linear-gradient(to right,#F44336 0%,#FF1744 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F44336',endColorstr='#FF1744',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.instagram:hover
+{
+	box-shadow:0 5px 8px rgba(63,81,181,0.50);
+	background:#FFC107;
+	background:-webkit-linear-gradient(left,#FFC107 0%,#F50057 50%,#3F51B5 100%);
+	background:linear-gradient(to right,#FFC107 0%,#F50057 50%,#3F51B5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC107',endColorstr='#3F51B5',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 5s ease infinite;
+	animation:Gradient 5s ease infinite
+}
+
+#dark .btn-gradient.linkedin:hover
+{
+	box-shadow:0 5px 8px rgba(3,169,244,0.50);
+	background:#0288D1;
+	background:-webkit-linear-gradient(left,#0288D1 0%,#2196F3 100%);
+	background:linear-gradient(to right,#0288D1 0%,#2196F3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0288D1',endColorstr='#2196F3',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.github:hover
+{
+	color:rgba(33,33,33,1);
+	box-shadow:0 5px 8px rgba(0,0,0,0.50);
+	background:#ECEFF1;
+	background:-webkit-linear-gradient(left,#ECEFF1 0%,#B0BEC5 100%);
+	background:linear-gradient(to right,#ECEFF1 0%,#B0BEC5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ECEFF1',endColorstr='#B0BEC5',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.codepen:hover
+{
+	box-shadow:0 5px 8px rgba(0,0,0,0.50);
+	background:#000;
+	background:-webkit-linear-gradient(left,#000 0%,#212121 100%);
+	background:linear-gradient(to right,#000 0%,#212121 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#212121',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.gmail:hover
+{
+	box-shadow:0 5px 8px rgba(244,67,54,0.50);
+	background:#D50000;
+	background:-webkit-linear-gradient(left,#D50000 0%,#FF1744 100%);
+	background:linear-gradient(to right,#D50000 0%,#FF1744 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#D50000',endColorstr='#FF1744',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+
+#dark .btn-gradient.skype:hover
+{
+	box-shadow:0 5px 8px rgba(3,169,244,0.50);
+	background:#030000;
+	background:#039BE5;
+	background:-webkit-linear-gradient(left,#039BE5 0%,#29B6F6 100%);
+	background:linear-gradient(to right,#039BE5 0%,#29B6F6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#039BE5',endColorstr='#29B6F6',GradientType=1);
+	background-size:400%;
+	-webkit-animation:Gradient 1s ease infinite;
+	animation:Gradient 1s ease infinite
+}
+</style>

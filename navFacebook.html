@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Nav Facebook</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        height: 48px;
+        box-shadow: 0 1px 2px #ccc;
+    }
+    .nav a{
+        text-decoration: none;
+        color: black;
+        position: relative;
+        width: 500px;
+        text-align: center;
+    }
+    .line-effect{
+        height: 2px;
+        width: 171px;
+        left: 25%;
+        background-color: blue;
+        position: fixed;
+        pointer-events: none;
+        transition: all 0.2s linear;
+    }
+
+</style>
+<body>
+    <div class="nav">
+        <a href="" class="link">Trang chủ</a>
+        <a href="" class="link">Watch</a>
+        <a href="" class="link">Nhóm</a>
+        <a href="" class="link">Trò chơi</a>
+    </div>
+    
+</body>
+<script>
+    window.addEventListener("load", function() {
+        const links = document.querySelectorAll('.link');
+        links.forEach( (item) => item.addEventListener("mouseenter", handleLink));
+        const line = document.createElement('div');
+        line.className = 'line-effect';
+        document.body.appendChild(line);
+
+        function handleLink(event) {
+            const { left, top, width, height} = event.target.getBoundingClientRect();
+            console.log({ left, top, width, height});
+            line.style.width = `${width}px`;
+            line.style.left = `${left}px`;
+            line.style.top = `${top + height + 13}px`;
+
+        }
+
+        // const nav = document.querySelector('.nav');
+        // nav.addEventListener("mouseleave", function () {
+        //     line.style.width = 0;
+        // })
+
+    });
+
+</script>
+</html>

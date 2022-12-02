@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" class="nav-item" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Nav youtube</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        list-style: none;
+        font-family: sans-serif;
+    }
+    .nav{
+        width: 80%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    .nav-menu{
+        flex: 90%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        overflow-x:scroll;
+        overflow-y: hidden;
+    }
+    ::-webkit-scrollbar {max-height: 50%; height: 50%;}
+
+    .nav-menu li{
+        border-radius: 1000px;
+        background-color: rgba(0, 0, 0, 0.05);
+        color: black;
+        text-decoration: none;
+        min-width: 200px;
+        margin: 10px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        user-select: none;  
+    }
+    .nav-menu li:hover:not(.active){
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .nav > .arrow-left , .arrow-right{
+        flex:5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        visibility:hidden;
+        cursor: pointer;
+        font-size: 30px;
+        user-select: none;
+    }
+
+    .arrow-right{
+        visibility: visible;
+    }
+    .arrow-left::before, .arrow-right::before{
+        position: absolute;
+        height: 46px;
+        width: 200%;
+        content: "";
+        background:linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        filter: blur(10px);
+    }
+    .arrow-right::before{
+        background:linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+    .nav-menu .active{
+        color: black ;
+        background-image: linear-gradient(to right bottom, #6a5af9, #f62682);
+    }
+    .nav-item-child{
+        width: 100%;
+        height: 100%;
+        background-color:rgba(227, 236, 228, 0.6) ;
+        border-radius: inherit;
+        padding: 5px 20px;
+    }
+    
+</style>
+
+
+<body>
+    <div class="nav">
+        <div class="arrow-left">‹</div>
+        <div class="nav-menu">
+                <li class="nav-item active" href=""><div class="nav-item-child">Tất cả</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Danh sách kết hợp</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child"> Âm nhạc</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Trực tiếp</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Điểm đến du lịch</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Đọc rap</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Thiên nhiên</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Nấu ăn</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Mới tải lên gần đây</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Đã xem</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Đề xuất mới</div></li>
+                <li class="nav-item" href=""><div class="nav-item-child">Last Child</div></li>
+        </div>
+        <div class="arrow-right">›</div>
+    </div>
+
+    
+</body>
+<script>
+    
+   window.addEventListener("load", function() {
+        const navMenu = document.querySelector('.nav-menu');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+        const navItems = document.querySelectorAll('.nav-item');
+        const maxWidth = (navMenu.scrollWidth - navMenu.clientWidth);
+        // console.log(maxWidth)
+        
+        navMenu.onscroll = function() {
+            if(navMenu.scrollLeft > 0){
+                arrowLeft.style.visibility = 'visible';
+                arrowRight.style.visibility = 'visible';
+                if(navMenu.scrollLeft == maxWidth || navMenu.scrollLeft == maxWidth + 1){
+                arrowRight.style.visibility = 'hidden';
+                }
+            }else if(navMenu.scrollLeft == 0){
+                arrowLeft.style.visibility = 'hidden';
+            }
+        }
+        arrowLeft.addEventListener('click', function() {
+            navMenu.scrollBy(-220, 0)
+        });
+
+        arrowRight.addEventListener('click', function() {
+            navMenu.scrollBy(220, 0)
+            if(navMenu.scrollLeft == maxWidth || navMenu.scrollLeft == maxWidth + 1){
+                arrowRight.style.visibility = 'hidden';
+                }
+        });
+
+        navItems.forEach( item => item.addEventListener('click', function(e) {
+            const current = navMenu.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        }));
+       
+   });
+
+</script>
+</html>

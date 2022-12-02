@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+    <h1>CODING UI</h1>
+    <div class="nav">
+        <li class="nav-item active" onclick="filterSelection('all')">All</li>
+        <li class="nav-item" onclick="filterSelection('button')">Button</li>
+        <li class="nav-item" onclick="filterSelection('loading')">Loading</li>
+        <li class="nav-item" onclick="filterSelection('tab')">Tab</li>
+        <li class="nav-item" onclick="filterSelection('input')">Input</li>
+        <li class="nav-item" onclick="filterSelection('list')">List</li>
+    </div>
+    <div class="container">
+
+        <!-- box 1 -->
+        <div class="box box-1 button">
+            <div class="box-header">
+                <span>Button box-1</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <!-- <pre>&lt;button class="button">PHAM HOANG MINH&lt;/button&gt;</pre> -->
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>
+                </div>
+                <div class="code-css">
+                    <pre>
+.button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid var(--color);
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+}
+
+.button:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color);
+    z-index: -1;
+    transition: width 0.25s ease-in;
+}
+
+.button:hover:before {
+    width: 100%;
+}
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- box 2 -->
+        <div class="box box-2 button">
+            <div class="box-header">
+                <span>Button box-2</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>
+                </div>
+                <div class="code-css">
+                    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid var(--color);
+        font-size: 16px;
+        position: relative;
+        isolation: isolate;
+    }
+    .button:before {
+        content: "";
+        height: 100%;
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color);
+        z-index: -1;
+        transition: width 0.25s ease-in;
+        }
+        .button:hover:before {
+        width: 100%;
+    }
+                
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box box-3 button">
+            <div class="box-header">
+                <span>Button box-3</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid var(--color);
+        font-size: 16px;
+        position: relative;
+        isolation: isolate;
+    }
+    .button:before {
+        content: "";
+        height: 0;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color);
+        z-index: -1;
+        transition: height 0.25s ease-in;
+    }
+    .button:hover:before {
+        height: 100%;
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 4 -->
+        <div class="box box-4 button">
+            <div class="box-header">
+                <span>Button box-4</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">
+                    <span>PHAM HOANG MINH</span>
+                </button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+    <pre>
+    &lt;button class="button"&gt;
+        &lt;span&gt;PHAM HOANG MINH&lt;/span&gt;
+    &lt;/button&gt;
+    </pre>
+                   <div class="code-html-copy">
+                    <button class="button">
+                        <span>PHAM HOANG MINH</span>
+                    </button>   
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid var(--color);
+        font-size: 16px;
+        position: relative;
+        isolation: isolate;
+    }
+    .button:before {
+        content: "";
+        height: 0;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color);
+        z-index: -1;
+        transition: height 0.25s ease-in;
+    }
+    .button:hover:before {
+        height: 100%;
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 5 -->
+        <div class="box box-5 button">
+            <div class="box-header">
+                <span>Button box-5</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">
+                    <span>PHAM HOANG MINH</span>
+                </button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid var(--color);
+        font-size: 16px;
+        position: relative;
+        isolation: isolate;
+    }
+    .button:before {
+        content: "";
+        height: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color);
+        z-index: -1;
+        transition: height 0.25s ease-in;
+    }
+    .button:hover:before {
+        height: 100%;
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 6 -->
+        <div class="box box-6 button">
+            <div class="box-header">
+                <span>Button box-6</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        position: relative;
+        isolation: isolate;
+    }
+    .button:before {
+        content: "";
+        height: 0;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background-color: var(--color);
+        z-index: -1;
+        transition: height 0.25s ease-in;
+    }
+    .button:hover:before {
+        height: 100%;
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 7 -->
+        <div class="box box-7 button">
+            <div class="box-header">
+                <span>Button box-7</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        position: relative;
+        isolation: isolate;
+    }
+    .button:before {
+        content: "";
+        height: 100%;
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: var(--color);
+        z-index: -1;
+        transition: width 0.25s ease-in;
+        }
+        .button:hover:before {
+        width: 100%;
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 8 -->
+        <div class="box box-8 button">
+            <div class="box-header">
+                <span>Button box-8</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --color: #6a5af9;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 15px 30px;
+        width: 200px;
+        border-radius: 4px;
+        background-color: var(--color);
+        cursor: pointer;
+        font-weight: 500;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: all 0.2s linear;
+    }
+    .button:hover {
+        transform: rotateY(-15deg);
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 9 -->
+        <div class="box box-9 button">
+            <div class="box-header">
+                <span>Button box-9</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button button-color-1">PHAM HOANG MINH</button>
+                <button class="button button-color-2">PHAM HOANG MINH</button>
+                <button class="button button-color-3">PHAM HOANG MINH</button>
+                <button class="button button-color-4">PHAM HOANG MINH</button>
+                <button class="button button-color-5">PHAM HOANG MINH</button>
+                <button class="button button-color-6">PHAM HOANG MINH</button>
+                <button class="button button-color-7">PHAM HOANG MINH</button>
+                <button class="button button-color-8">PHAM HOANG MINH</button>
+                <button class="button button-color-9">PHAM HOANG MINH</button>
+                <button class="button button-color-10">PHAM HOANG MINH</button>
+                <button class="button button-color-11">PHAM HOANG MINH</button>
+                <button class="button button-color-12">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                    <pre>
+    &lt;button class="button button-color-1"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-2"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-3"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-4"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-5"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-6"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-7"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-8"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-9"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-10"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-11"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-12"&gt;PHAM HOANG MINH&lt;/button&gt;
+                    </pre>
+                   <div class="code-html-copy">
+                    <button class="button button-color-1">PHAM HOANG MINH</button>
+                    <button class="button button-color-2">PHAM HOANG MINH</button>
+                    <button class="button button-color-3">PHAM HOANG MINH</button>
+                    <button class="button button-color-4">PHAM HOANG MINH</button>
+                    <button class="button button-color-5">PHAM HOANG MINH</button>
+                    <button class="button button-color-6">PHAM HOANG MINH</button>
+                    <button class="button button-color-7">PHAM HOANG MINH</button>
+                    <button class="button button-color-8">PHAM HOANG MINH</button>
+                    <button class="button button-color-9">PHAM HOANG MINH</button>
+                    <button class="button button-color-10">PHAM HOANG MINH</button>
+                    <button class="button button-color-11">PHAM HOANG MINH</button>
+                    <button class="button button-color-12">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button{
+        padding:15px 30px;
+        background-size: 300% 100%; /* !important */
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        border: transparent;
+        cursor: pointer;
+        border-radius: 4px;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        margin-bottom: 20px;
+    }
+    button:hover{
+        background-position: 100% 0; /* !important */
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .button.button-color-1 {
+        background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+        box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    }
+    .button.button-color-2 {
+        background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+        box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+    }
+    .button.button-color-3 {
+        background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    }
+    .button.button-color-4 {
+        background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+        box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+    }
+    .button.button-color-5 {
+        background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+        box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+    }
+    .button.button-color-6 {
+        background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+        box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+    }
+    .button.button-color-7 {
+        background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+        box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    }
+    .button.button-color-8 {
+        background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+        box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    }
+    .button.button-color-9 {
+        background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+        box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    }
+    .button.button-color-10 {
+        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+        box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+    }
+    .button.button-color-11 {
+        background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  
+        box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+    }
+    .button.button-color-12 {
+        background-image: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+        box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Box 10 -->
+        <div class="box box-10 button">
+            <div class="box-header">
+                <span>Button box-10</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                  <pre>
+    &lt;button class="button"&gt;PHAM HOANG MINH&lt;/button&gt;
+                  </pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 15px 30px;
+        background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+        background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-size: 500%; /*Phải đứng sau background*/
+    }
+        
+    .button:hover {
+        -webkit-animation: gradient10 3s ease;
+        -moz-animation: gradient10 3s ease;
+        animation: gradient10 3s ease;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; /*Sau animate giữ background ở center k trả về background ban đầu*/
+    }
+        
+    @keyframes gradient10 {
+        0% {
+        background-position: 0% 50%; }
+        100% {
+        background-position: 100%; }
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+         <!-- Box 11 -->
+         <div class="box box-11 button">
+            <div class="box-header">
+                <span>Button box-11</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button button-color-1">PHAM HOANG MINH</button>
+                <button class="button button-color-2">PHAM HOANG MINH</button>
+                <button class="button button-color-3">PHAM HOANG MINH</button>
+                <button class="button button-color-4">PHAM HOANG MINH</button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                  <pre>
+    &lt;button class="button button-color-1"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-2"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-3"&gt;PHAM HOANG MINH&lt;/button&gt;
+    &lt;button class="button button-color-4"&gt;PHAM HOANG MINH&lt;/button&gt;
+                  </pre>
+                   <div class="code-html-copy">
+                    <button class="button button-color-1">PHAM HOANG MINH</button>
+                    <button class="button button-color-2">PHAM HOANG MINH</button>
+                    <button class="button button-color-3">PHAM HOANG MINH</button>
+                    <button class="button button-color-4">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button {
+        --colour1 : #7b81ec;
+        --colour2: #3bd1d3;
+        --colour3: #fa80d2;
+        --colour4: #fed757;
+        --colour5: #8ce0f1;
+        --colour6: #79f391;
+        --colour7: #525a69;
+        --colour8: #898dda;
+            border: 6px solid rgba(255, 255, 255, 0.45); /* !important */
+            border-radius: 50px;
+            padding: 1em 3em;
+            background-size: 100%;
+            background-clip: padding-box; /* !important */
+            position: relative; /* !important */
+            color: #fff;
+    }
+    .button:before {
+        content: "&#34";/* !important */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        border-radius: 50px;
+        z-index: -1;
+        filter: blur(14px);
+    }
+    .button:after {
+        content: "&#34";/* !important */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border-radius: 50px;
+        z-index: -1;
+        filter: blur(14px);
+    }
+    .button-color-1 {
+        background-image: linear-gradient(90deg, var(--colour1), var(--colour2));
+    }
+    .button-color-1:before {
+        background-image: linear-gradient(90deg, var(--colour1), transparent);
+    }
+    .button-color-1:after {
+        background-image: linear-gradient(90deg, transparent, var(--colour2));
+    }
+    .button-color-2 {
+        background-image: linear-gradient(90deg, var(--colour3), var(--colour4));
+    }
+    .button-color-2:before {
+        background-image: linear-gradient(90deg, var(--colour3), transparent);
+    }
+    .button-color-2:after {
+        background-image: linear-gradient(90deg, transparent, var(--colour4));
+    }
+    .button-color-3 {
+        background-image: linear-gradient(90deg, var(--colour5), var(--colour6));
+    }
+    .button-color-3:before {
+        background-image: linear-gradient(90deg, var(--colour5), transparent);
+    }
+    .button-color-3:after {
+        background-image: linear-gradient(90deg, transparent, var(--colour6));
+    }
+    .button-color-4 {
+        background-image: linear-gradient(90deg, var(--colour7), var(--colour8));
+    }
+    .button-color-4:before {
+        background-image: linear-gradient(90deg, var(--colour7), transparent);
+    }
+    .button-color-4:after {
+        background-image: linear-gradient(90deg, transparent, var(--colour8));
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+         <!-- Box 12 -->
+         <div class="box box-12 button">
+            <div class="box-header">
+                <span>Button box-12</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <button class="button">
+                    PHAM HOANG MINH
+                    <div class="button-fill"></div>
+                </button>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                  <pre>
+    &lt;button class="button"&gt;
+        PHAM HOANG MINH
+        &lt;div class="button-fill"&gt;&lt;/div&gt;
+    &lt;/button&gt;
+                  </pre>
+                   <div class="code-html-copy">
+                    <button class="button">
+                        PHAM HOANG MINH
+                        <div class="button-fill"></div>
+                    </button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .button, .button-fill {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        padding: 15px 30px;
+        border: transparent;
+        font-size: 16px;
+        color: rgba(255,255,255,0.9);
+        border-radius: 4px;
+        cursor: pointer;
+        background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+        background-size: 600%; /* !important */
+        animation: anime 16s linear infinite;
+    }
+    .button-fill {
+        position: absolute;
+        margin-top: -70px;
+        z-index: -1;
+        filter: blur(30px);
+        opacity: 0.8;
+    }
+        
+    @keyframes anime {
+        0%
+            {background-position: 0% 50%}
+        50%
+            { background-position: 100% 50%}
+        100%
+            {background-position: 0% 50%}
+    }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <!-- Box load 1 -->
+         <div class="box load-1 loading">
+            <div class="box-header">
+                <span>Button load-1</span>
+                <button class="btn-view">View code</button>
+            </div>
+            <div class="box-main">
+                <div class="circle-loading"></div>
+            </div>
+            <div class="box-footer">
+                <button class="btn-copyHTML">Copy HTML</button>
+                <button class="btn-copyCSS">Copy CSS</button>
+            </div>
+            <div class="code">
+                <div class="code-html">
+                   <pre><code><span>&lt;button </span><span style="color: rgb(149, 65, 33);">class</span><span>="</span><span style="color: rgb(153, 0, 115);">button</span><span>"&gt;</span><span style="color: rgb(153, 0, 115);">PHAM</span><span> </span><span style="color: rgb(153, 0, 115);">HOANG</span><span> </span><span style="color: rgb(153, 0, 115);">MINH</span><span>&lt;/</span><span style="color: rgb(153, 0, 115);">button</span><span>&gt;</span></code></pre>
+                   <div class="code-html-copy">
+                    <button class="button">PHAM HOANG MINH</button>
+                   </div>  
+                </div>
+                <div class="code-css">
+    <pre>
+    .circle-loading {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 15rem;
+        position: relative;
+        margin: 0 auto;
+        --color: #6a5af9;
+        }
+        .circle-loading:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        border: 1rem solid transparent;
+        border-right-color: var(--color);
+        border-bottom-color: var(--color);
+        animation: circleLoading 1s forwards infinite linear;
+        }
+        @keyframes circleLoading {
+        to {
+            transform: rotate(360deg);
+        }
+        }
+    </pre>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+   
+    
+</body>
+<script src="style.js"></script>
+</html>

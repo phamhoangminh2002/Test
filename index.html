@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav" id="nav">
+      <li class="btn-bar"><i class="fa-solid fa-bars"></i></li>
+      <li href="" class="nav-item active" onclick="filterSelection('css')">CSS</li>
+      <li href="" class="nav-item" onclick="filterSelection('js')">Javascript</li>
+      <li href="" class="nav-item" onclick="filterSelection('boostrap')">Boostrap</li>
+      <li href="" class="nav-item" onclick="filterSelection('sql')">SQL</li>
+    </div>
+    <div class="side-bar">
+      <div class="css inner-sidebar show">
+        <h3>CSS Tutorial</h3>
+        <li class="selector unit active">CSS Selector</li>
+        <li class="display unit">Display</li>
+        <li class="position unit">Position</li>
+      </div>
+      <div class="js inner-sidebar">
+        <h3>Javascript Tutorial</h3>
+        <li class="oparator unit">Oparators</li>
+        <li class="funtion unit">Funtion</li>
+        <li class="object unit">Object</li>
+      </div>
+      <div class="boostrap inner-sidebar">
+        <h3>Boostrap Tutorial</h3>
+      </div>
+      <div class="sql inner-sidebar">
+        <h3>SQL</h3>
+        <li class="create_database unit">Create database</li>
+        <li class="create_table unit">Create table</li>
+      </div>
+    </div>
+    <div class="main">
+         <iframe src="sql/create_table.html" class="iframe"  frameborder="0"></iframe>
+    </div>  
+  
+</body>
+<script src="styles.js"></script>
+</html>

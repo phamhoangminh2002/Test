@@ -1,0 +1,58 @@
+<a class='a' href='#'>buy tickets</a>
+
+<style>
+	:root{
+		--btn-w: 12em;
+		--btn-lh: 3;
+		--btn-d: sqrt(pow(var(--btn-w), 2) + pow(var(--btn-lh), 2));
+		--btn-a: atan(var(--btn-lh)/(var(--btn-w)/(var(--btn-w)*0 + 1)))*-180deg/pi();
+	}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background: #333;
+}
+.a {
+  --p: 0;
+  --q: calc(1 - var(--p));
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 12em;
+  background: #fff;
+  color: #000;
+  font: 700 1.125em/ 3 trebuchet ms, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.a:before, .a:after {
+  --i: var(--p);
+  --j: calc(1 - var(--i));
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--j)*(100% - sqrt(pow(12em, 2)pow(3, 2))));
+  width: sqrt(pow(12em, 2)pow(3, 2));
+  transform-origin: calc(var(--j)*100%) calc(var(--i)*100%);
+  transform: rotate(atan(3/12em/1em)*-180deg/pi()) translate(calc(var(--q)*(1 - 2*var(--i))*-100%));
+  box-shadow: 0 0 0 1px currentcolor;
+  background: currentcolor;
+  color: #ef4654;
+  transition: transform 0.5s ease-in-out;
+  content: '&#39';
+}
+
+.a:after {
+  --i: ;
+}
+.a:hover, .a:focus {
+  --p: 1 ;
+}
+
+</style>

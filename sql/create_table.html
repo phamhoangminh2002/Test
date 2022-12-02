@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create table</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Create table</h1>
+    <hr>
+    <div class="content">
+        <li>Create data name CustomerDB</li>
+        <div class="code">
+            <pre>
+                <b>CREATE DATABASE</b> CustomerDB
+                <b>GO</b>           
+            </pre>
+        </div>
+        
+        <li>Use database CustomerDB</li>
+        <div class="code">
+            <pre>
+                <b>USE</b> CustomerDB
+                <b>GO</b>
+            </pre>
+        </div>
+
+        <li>Create table Customer in database CustomerDB</li>
+        <div class="code">
+            <pre>
+                <b>CREATE TABLE</b> Customer
+                (
+                   CID varchar(50) NOT NULL,
+                   CName varchar(50)
+                )
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Create table Order in database CustomerDB</li>
+        <div class="code">
+            <pre>
+                <b>CREATE TABLE</b> [Order] <span>-- ten khac hoac [Order] de khong trung voi tu khoa</span>
+                (
+                   OrderID int NOT NULL,
+                   CusID varchar(50),
+                   BuyDate date
+                )
+                <b>go</b>
+
+                <span>--set dateformat dmy -> insert data</span>
+            </pre>
+        </div>
+
+        <li>Create table Supplier in database CustomerDB</li>
+        <div class="code">
+            <pre>
+                <b>CREATE TABLE</b> Supplier 
+                (
+                   SupID varchar(50) NOT NULL,
+                   SupName varchar(50)
+                )
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Create table Item in database CustomerDB</li>
+        <div class="code">
+           <pre>
+            <b>CREATE TABLE</b> Item
+            (
+                ItemID int NOT NULL,
+                ItemName varchar(50),
+                Price int,
+                SupID varchar(50)
+            )
+            <b>go</b>
+           </pre>
+        </div>
+
+        <li>Create table OrderDetail in database CustomerDB</li>
+        <div class="code">
+            <pre>
+                <b>CREATE TABLE</b> OrderDetail
+                (
+                   OrderID int,
+                   ItemID int,
+                   Quantity int,
+                )
+                <b>go</b>
+            </pre>
+        </div>
+
+        <h1>Alter table</h1>
+        <hr> <br>
+        <li>Change data column CName in table Customer</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Customer
+                <b>ALTER COLUMN</b> CName <b> varchar(60) NOT NULL</b>
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Add new column in table Customer</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Customer
+                <b>ADD</b> Birthday <b>date</b>
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Delete column Birthday in table Customer</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Customer
+                <b>DROP COLUMN</b>  Birthday
+                <b>GO</b>
+            </pre>
+        </div>
+
+        <li>Change table Item --set value column Item is IDENTITY <span>(default asc)</span></li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Item
+                <b>ADD</b> ItemID <b>int IDENTITY(10,1) NOT NULL</b>   <span>--index auto start 10 and asc 1 unit</span>
+                <b>go</b>
+            </pre>
+        </div>
+
+        <h1>Constraint</h1>
+        <hr> <br>
+        <li>Add 1 primary key for tables</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Customer
+                <b>ADD CONSTRAINT</b> pk_CusID <b>PRIMARY KEY</b> (CID)
+                <b>go</b>
+                <span>--must be NOT NULL at time create table </span>
+            </pre>
+        </div>
+
+        <li>Add 2 primary key for tables</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> OrderDetail
+                <b>ADD CONSTRAINT</b> pk_OrderDetail <b>PRIMARY KEY</b> (OrderID, ItemID) 
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Add foreign key for table</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> [Order]
+                <b>ADD CONSTRAINT</b> fk_CusID <b>FOREIGN KEY</b> (CusID) <b>REFERENCES</b> Customer (CID)
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Add column constraint unique</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Customer
+                <b>ADD</b> Email <b>varchar (60) UNIQUE</b>
+                <b>go</b>
+            </pre>
+        </div>
+
+        <li>Add constraint check</li>
+        <div class="code">
+            <pre>
+                <b>ALTER TABLE</b> Customer 
+                <b>ADD CONSTRAINT</b> ck_Age <b>CHECK</b> (Age >15 and Age<33)
+                <b>go</b>
+            </pre>
+        </div>
+
+        <h1>Update</h1>
+        <li>Change information </li>
+        <div class="code">
+            <pre>
+                <b>UPDATE</b> Customer
+                <b>SET</b> Email = 'abc@gmail.com'
+                <b>WHERE</b> CName = 'Nguyen Van A'
+                <b>go</b>
+            </pre>
+        </div>
+
+
+        
+        
+
+    </div>
+</body>
+</html>

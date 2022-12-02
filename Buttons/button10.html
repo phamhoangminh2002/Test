@@ -1,0 +1,37 @@
+<div class="center">
+	<button class="button">Hover Me</button>
+</div>
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+
+body {
+  background-color: rgba(192, 241, 143, 0.42);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  font-size: 20px;
+  color: rgba(0,0,0,0.7);
+  font-family: 'Raleway', sans-serif;
+  padding: 15px 45px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #ED4264, #FFEDBC);
+  background-size: 0;
+  background-repeat: no-repeat;
+  border-image: linear-gradient(to right, #ED4264, #FFEDBC);
+  border-image-slice: 1;
+  /* border-image-width: 5px; */
+  
+  transition: all 0.5s ease;
+}
+
+.button:hover  {
+  background-size: 100%;
+}
+</style>

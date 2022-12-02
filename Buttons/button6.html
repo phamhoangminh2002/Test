@@ -1,0 +1,91 @@
+<button class="button button-color-1">I'm a button</button>
+<button class="button button-color-2">I'm a button</button>
+<button class="button button-color-3">I'm a button</button>
+<button class="button button-color-4">I'm a button</button>
+<style>
+	:root{
+		--colour1 : #7b81ec;
+		--colour2: #3bd1d3;
+		--colour3: #fa80d2;
+		--colour4: #fed757;
+		--colour5: #8ce0f1;
+		--colour6: #79f391;
+		--colour7: #525a69;
+		--colour8: #898dda;
+	}
+ .button {
+	--colour1 : #7b81ec;
+	--colour2: #3bd1d3;
+	--colour3: #fa80d2;
+	--colour4: #fed757;
+	--colour5: #8ce0f1;
+	--colour6: #79f391;
+	--colour7: #525a69;
+	--colour8: #898dda;
+	 border: 6px solid rgba(255, 255, 255, 0.45); /* !important */
+	 border-radius: 50px;
+	 padding: 1em 3em;
+	 background-size: 100%;
+	 background-clip: padding-box; /* !important */
+	 position: relative; /* !important */
+	 color: #fff;
+}
+ .button:before {
+	 content: "&#34";/* !important */
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 top: 5px;
+	 left: 5px;
+	 border-radius: 50px;
+	 z-index: -1;
+	 filter: blur(14px);
+}
+ .button:after {
+	 content: "&#34";/* !important */
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 top: 5px;
+	 right: 5px;
+	 border-radius: 50px;
+	 z-index: -1;
+	 filter: blur(14px);
+}
+ .button-color-1 {
+	 background-image: linear-gradient(90deg, var(--colour1), var(--colour2));
+}
+ .button-color-1:before {
+	 background-image: linear-gradient(90deg, var(--colour1), transparent);
+}
+ .button-color-1:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour2));
+}
+ .button-color-2 {
+	 background-image: linear-gradient(90deg, var(--colour3), var(--colour4));
+}
+ .button-color-2:before {
+	 background-image: linear-gradient(90deg, var(--colour3), transparent);
+}
+ .button-color-2:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour4));
+}
+ .button-color-3 {
+	 background-image: linear-gradient(90deg, var(--colour5), var(--colour6));
+}
+ .button-color-3:before {
+	 background-image: linear-gradient(90deg, var(--colour5), transparent);
+}
+ .button-color-3:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour6));
+}
+ .button-color-4 {
+	 background-image: linear-gradient(90deg, var(--colour7), var(--colour8));
+}
+ .button-color-4:before {
+	 background-image: linear-gradient(90deg, var(--colour7), transparent);
+}
+ .button-color-4:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour8));
+}
+</style>

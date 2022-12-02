@@ -1,0 +1,106 @@
+<section class="sunset">
+	<a class="button" href="#">everything is fake</a>
+	<a class="button inverse" href="#">existence is a construct</a>  
+	<a class="button" href="#">exit your corporeal form</a>  
+	<a class="button inverse" href="#">enter the hell orb</a>
+  </section>
+  
+  <section class="underwater">
+	<a class="button" href="#">everything is fake</a>
+	<a class="button inverse" href="#">existence is a construct</a>  
+	<a class="button" href="#">exit your corporeal form</a>  
+	<a class="button inverse" href="#">enter the hell orb</a>
+  </section>
+  
+  <section class="night">
+	<a class="button" href="#">everything is fake</a>
+	<a class="button inverse" href="#">existence is a construct</a>  
+	<a class="button" href="#">exit your corporeal form</a>  
+	<a class="button inverse" href="#">enter the hell orb</a>
+  </section>
+<style>
+ section.sunset .button {
+	 background: linear-gradient(25deg, #ff4437, #241490);
+}
+ section.sunset .button.inverse {
+	 -webkit-background-clip: text; /* important */
+	 -webkit-text-fill-color: transparent;
+	 border-image-source: linear-gradient(25deg, #ff4437, #241490);
+}
+ section.underwater .button {
+	 background: linear-gradient(25deg, #1ddd77, #1c6fe3);
+}
+ section.underwater .button.inverse {
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 border-image-source: linear-gradient(25deg, #1ddd77, #1c6fe3);
+}
+ section.night .button {
+	 background: linear-gradient(25deg, #24032b, #34789d);
+}
+ section.night .button.inverse {
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 border-image-source: linear-gradient(25deg, #24032b, #34789d);
+}
+ * {
+	 margin: 0;
+	 padding: 0;
+	 border: 0;
+	 box-sizing: border-box;
+}
+ /* html, body {
+	 height: 100%;
+}
+ section {
+	 width: 50em;
+	 margin: 2em auto;
+	 padding: 2em;
+	 background: #e9e9e9;
+	 text-align: center;
+	 position: relative;
+}
+ section:before {
+	 content: attr(class);
+	 position: absolute;
+	 top: 1em;
+	 left: 1em;
+	 text-transform: uppercase;
+	 font-weight: bold;
+	 color: #ccc;
+} */
+ .button {
+	 display: table;
+	 background-size: 200% 200% !important;
+	 color: #fff;
+	 text-transform: uppercase;
+	 text-decoration: none;
+	 letter-spacing: 1px;
+	 padding: 1.3em 1.5em;
+	 margin: 1.5em auto;
+	 border-radius: 0.3em;
+	 -webkit-transition: all 200ms linear;
+}
+ .button:hover {
+	 background-size: 110% 110% !important;
+	 padding: 1.3em 2.1em;
+	 -webkit-transition: all 200ms linear;
+}
+ .button.inverse {
+	 font-weight: bold;
+	 padding: 1.15em 1.5em;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 border-width: 0.25em;
+	 border-style: solid;
+	 border-image-source: linear-gradient(45deg, #fff, #fff);
+	 border-image-slice: 30%;
+	 border-image-width: 1;
+	 border-image-repeat: stretch;
+}
+ .button.inverse:hover {
+	 background-size: 100% 100% !important;
+	 border-image-slice: 3%;
+	 padding: 1.15em 2.1em;
+}
+</style>  

@@ -1,0 +1,471 @@
+/* Box 1 */
+.box-1 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid var(--color);
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+  }
+ .box-1 .button:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color);
+    z-index: -1;
+    transition: width 0.25s ease-in;
+  }
+  .box-1 .button:hover:before {
+    width: 100%;
+  }
+
+/* Box 2 */
+.box-2 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid var(--color);
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+  }
+ .box-2 .button:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color);
+    z-index: -1;
+    transition: width 0.25s ease-in;
+  }
+ .box-2 .button:hover:before {
+    width: 100%;
+  }
+
+/* Box 3 */
+.box-3 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid var(--color);
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+  }
+  .box-3 .button:before {
+    content: "";
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color);
+    z-index: -1;
+    transition: height 0.25s ease-in;
+  }
+  .box-3 .button:hover:before {
+    height: 100%;
+  }
+
+/* Box 4 */
+.box-4 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: var(--color);
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    backface-visibility: hidden;
+  }
+  .box-4 .button span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+    backface-visibility: hidden;
+  }
+  .box-4 .button:before {
+    content: "HELLO";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all 0.25s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-4 .button:hover:before {
+    top: 0;
+  }
+  .box-4 .button:hover span {
+    transform: translateY(300%);
+  }
+
+  /* Box 5 */
+  .box-5 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid var(--color);
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+  }
+  .box-5 .button:before {
+    content: "";
+    height: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    z-index: -1;
+    transition: height 0.25s ease-in;
+  }
+  .box-5 .button:hover:before {
+    height: 100%;
+  }
+
+  /* Box 6 */
+  .box-6 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+  }
+  .box-6 .button:before {
+    content: "";
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    background-color: var(--color);
+    z-index: -1;
+    transition: height 0.25s ease-in;
+  }
+  .box-6 .button:hover:before {
+    height: 100%;
+  }
+
+  /* Box 7 */
+  .box-7 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    isolation: isolate;
+  }
+  .box-7 .button:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--color);
+    z-index: -1;
+    transition: width 0.25s ease-in;
+  }
+  .box-7 .button:hover:before {
+    width: 100%;
+  }
+
+  /* Box 8 */
+  .box-8 .button {
+    --color: #6a5af9;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 15px 30px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: var(--color);
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.2s linear;
+  }
+  .box-8 .button:hover {
+    transform: rotateY(-15deg);
+  }
+
+/* Box 9 */
+.box-9 .button{
+  padding:15px 30px;
+  background-size: 300% 100%; /* !important */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  margin-bottom: 20px;
+}
+.box-9 .button:hover{
+  background-position: 100% 0; /* !important */
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.box-9 .button.button-color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.box-9 .button.button-color-2 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.box-9 .button.button-color-3 {
+  background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+.box-9 .button.button-color-4 {
+  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+.box-9 .button.button-color-5 {
+  background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+.box-9 .button.button-color-6 {
+  background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+.box-9 .button.button-color-7 {
+  background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+.box-9 .button.button-color-8 {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.box-9 .button.button-color-9 {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.box-9 .button.button-color-10 {
+  background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+.box-9 .button.button-color-11 {
+  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  
+  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+.box-9 .button.button-color-12 {
+  background-image: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+/* Box 10 */
+.box-10 .button {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px 30px;
+  background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+  background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-size: 500%; /*Phải đứng sau background*/
+}
+
+.box-10 .button:hover {
+  -webkit-animation: gradient10 3s ease;
+      -moz-animation: gradient10 3s ease;
+      animation: gradient10 3s ease;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; /*Sau animate giữ background ở center k trả về background ban đầu*/
+  }
+
+@keyframes gradient10 {
+0% {
+  background-position: 0% 50%; }
+100% {
+  background-position: 100%; }
+  }
+
+/* Box 11 */
+.box-11 .button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+	--colour1 : #7b81ec;
+	--colour2: #3bd1d3;
+	--colour3: #fa80d2;
+	--colour4: #fed757;
+	--colour5: #8ce0f1;
+	--colour6: #79f391;
+	--colour7: #525a69;
+	--colour8: #898dda;
+	 border: 6px solid rgba(255, 255, 255, 0.45); /* !important */
+	 border-radius: 50px;
+	 padding: 1em 3em;
+	 background-size: 100%;
+	 background-clip: padding-box; /* !important */
+	 position: relative; /* !important */
+	 color: #fff;
+   margin-bottom: 20px;
+}
+ .box-11 .button:before {
+	 content: "&#34";/* !important */
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 top: 5px;
+	 left: 5px;
+	 border-radius: 50px;
+	 z-index: -1;
+	 filter: blur(14px);
+}
+ .box-11 .button:after {
+	 content: "&#34";/* !important */
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 top: 5px;
+	 right: 5px;
+	 border-radius: 50px;
+	 z-index: -1;
+	 filter: blur(14px);
+}
+ .box-11 .button-color-1 {
+	 background-image: linear-gradient(90deg, var(--colour1), var(--colour2));
+}
+ .button-color-1:before {
+	 background-image: linear-gradient(90deg, var(--colour1), transparent);
+}
+ .box-11 .button-color-1:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour2));
+}
+ .box-11 .button-color-2 {
+	 background-image: linear-gradient(90deg, var(--colour3), var(--colour4));
+}
+ .box-11 .button-color-2:before {
+	 background-image: linear-gradient(90deg, var(--colour3), transparent);
+}
+ .box-11 .button-color-2:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour4));
+}
+ .box-11 .button-color-3 {
+	 background-image: linear-gradient(90deg, var(--colour5), var(--colour6));
+}
+ .box-11 .button-color-3:before {
+	 background-image: linear-gradient(90deg, var(--colour5), transparent);
+}
+ .box-11 .button-color-3:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour6));
+}
+ .box-11 .button-color-4 {
+	 background-image: linear-gradient(90deg, var(--colour7), var(--colour8));
+}
+ .box-11 .button-color-4:before {
+	 background-image: linear-gradient(90deg, var(--colour7), transparent);
+}
+ .box-11 .button-color-4:after {
+	 background-image: linear-gradient(90deg, transparent, var(--colour8));
+}
+
+/* Box 12 */
+.box-12 .button, .button-fill {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 15px 30px;
+  border: transparent;
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  border-radius: 4px;
+    cursor: pointer;
+  background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+  background-size: 600%; /* !important */
+  animation: anime12 16s linear infinite;
+ }
+.box-12 .button-fill{
+  position: absolute;
+  margin-top: -70px;
+  z-index: -1;
+  filter: blur(30px);
+  opacity: 0.8;
+ }
+   
+@keyframes anime12 {
+0%
+   {background-position: 0% 50%}
+ 50%
+  { background-position: 100% 50%}
+ 100%
+   {background-position: 0% 50%}
+}
